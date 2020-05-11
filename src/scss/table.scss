@@ -18,6 +18,7 @@
 
   .row-info {
     display: flex;
+    position: relative;
     justify-content: center;
     align-items: center;
     min-width: $info-cell-width;
@@ -33,6 +34,7 @@
 
   .column {
     display: flex;
+    position: relative;
     justify-content: center;
     align-items: center;
     background: #f8f9fa;
@@ -61,6 +63,35 @@
       border: none;
       outline: 2px solid #3c74ff;
       z-index: 2;
+    }
+  }
+
+  .col-resize {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 4px;
+    background: #3c74ff;
+    opacity: 0;
+    &:hover {
+      opacity: 1;
+      cursor: col-resize;
+    }
+  }
+
+  .row-resize {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    height: 4px;
+    width: 100%;
+    background: #3c74ff;
+    opacity: 0;
+    &:hover {
+      opacity: 1;
+      cursor: row-resize;
     }
   }
 
