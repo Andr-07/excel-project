@@ -13,6 +13,8 @@ export function resizeHandler($root, event) {
       [sideProp]: '-5000px'
     })
 
+    console.log(event.target)
+
     document.onmousemove = e => {
       if (type === 'col') {
         const delta = e.pageX - coords.right
